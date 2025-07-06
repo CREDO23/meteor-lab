@@ -2,3 +2,10 @@ body {
   padding: 10px;
   font-family: sans-serif;
 }
+
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
