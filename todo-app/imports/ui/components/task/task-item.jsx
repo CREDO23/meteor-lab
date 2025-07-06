@@ -1,7 +1,7 @@
 import React from "react";
 
 export function TaskItem(props) {
-  const { title,  onCheckboxClick, isChecked } = props;
+  const { title,  onCheckboxClick, isChecked, _id, onDelete } = props;
   return (
     <div
       style={{
@@ -19,6 +19,7 @@ export function TaskItem(props) {
         onCheckboxClick(props);
       }} />
       <p style={{ margin: 0, padding: 0 }}>{title}</p>
+      <span onClick={() => onDelete(_id)}>x</span>
     </div>
   );
 }

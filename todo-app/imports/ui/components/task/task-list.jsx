@@ -11,6 +11,10 @@ export function TaskList(props) {
     });
   };
 
+  const handleDelete = async (id) => {
+    await Meteor.callAsync("task.remove", id);
+  };
+
   return (
     <div>
       {tasks.map((task) => (
@@ -18,6 +22,7 @@ export function TaskList(props) {
           key={task._id}
           {...task}
           onCheckboxClick={onCheckboxClick}
+          onDelete={handleDelete}
         />
       ))}
     </div>

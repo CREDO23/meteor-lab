@@ -14,4 +14,8 @@ Meteor.methods({
             }
         })
     },
+
+    'task.remove'(_id) {
+        return taskCollection.removeAsync(_id);
+    }
 });
