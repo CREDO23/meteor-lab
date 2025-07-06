@@ -10,7 +10,6 @@ const insertTask = (taskTitle) =>
 
 Meteor.startup(async () => {
 
-  console.log(await taskCollection.find().fetch());
   // If the Links collection is empty, add some data.
   if ((await taskCollection.find().countAsync()) === 0) {
     [
